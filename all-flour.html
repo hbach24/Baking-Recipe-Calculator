@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="style.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baking Calculator</title>
+  </head>
+  <body>
+    <h1>Baking Calculator</h1>
+
+    <div class="dropdown">
+      <button class="dropdown-btn">Find Ingredient</button>
+      <div class="dropdown-list hide">
+        <!-- <input type="text" placeholder="Search Ingredient" /> -->
+        <ul>
+          <li id="all-flour">
+            <a href="all-flour.html"> All-purpose Flour</a>
+          </li>
+          <li id="cake-flour"><a href="#"> Cake Flour</a></li>
+          <li id="gran-sugar"><a href="#"> White Granulated Sugar</a></li>
+          <li id="brown-sugar"><a href="#"> Brown Sugar</a></li>
+          <li id="powder-sugar"><a href="#"> Powdered Sugar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="convert">
+      <p>Pick a conversion</p>
+      <button onclick="gramsToCups()" id="grams-cups">Grams to cups</button>
+      <button onclick="cupsToGrams()" id="cups-grams">Cups to grams</button>
+      <div id="box">
+        <input class="input" type="number" name="type" />
+        <button class="conv-press">Convert</button>
+      </div>
+    </div>
+    <div>
+      <p class="result">Result:</p>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      let measure;
+      let result;
+      let set;
+
+      function gramsToCups() {
+        document.getElementsByName("type")[0].placeholder = "Grams to cups";
+        set = "gram-cup";
+      }
+
+      function cupsToGrams() {
+        document.getElementsByName("type")[0].placeholder = "Cups to grams";
+        set = "cup-gram";
+      }
+
+      const press = document.querySelector(".conv-press");
+      press.addEventListener("click", output);
+
+      function gramsToCupsConv() {
+        const input = document.querySelector(".input").value;
+        // 1 cup = 120g of all-purpose flour
+        result = input / 120;
+        measure = "cups";
+        result = result.toFixed(3);
+      }
+
+      function cupsToGramsConv() {
+        const input = document.querySelector(".input").value;
+        result = input * 120;
+        measure = "grams";
+        result = result.toFixed(3);
+      }
+
+      function output() {
+        const input = document.querySelector(".input").value;
+
+        if (input === "") {
+          document.querySelector(".result").textContent =
+            "Pick a conversion first.";
+          return;
+        }
+
+        if (set === "gram-cup") {
+          gramsToCupsConv();
+        } else if (set === "cup-gram") {
+          cupsToGramsConv();
+        }
+
+        document.querySelector(
+          ".result"
+        ).textContent = `Result: ${result} ${measure} of all-purpose flour`;
+      }
+    </script>
+  </body>
+</html>

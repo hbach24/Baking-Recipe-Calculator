@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="style.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baking Calculator</title>
+  </head>
+  <body>
+    <h1>Baking Calculator</h1>
+
+    <div class="dropdown">
+      <button class="dropdown-btn">Find Ingredient</button>
+      <div class="dropdown-list hide">
+        <!-- <input type="text" placeholder="Search Ingredient" /> -->
+        <ul>
+          <li id="all-flour">
+            <a href="all-flour.html"> All-purpose Flour</a>
+          </li>
+          <li id="cake-flour"><a href="#"> Cake Flour</a></li>
+          <li id="gran-sugar"><a href="#"> White Granulated Sugar</a></li>
+          <li id="brown-sugar"><a href="#"> Brown Sugar</a></li>
+          <li id="powder-sugar"><a href="#"> Powdered Sugar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="convert">
+      <p>Pick a conversion</p>
+      <button id="grams-cups">Grams to cups</button>
+      <button id="cups-grams">Cups to grams</button>
+      <div id="box">
+        <input class="input" type="number" />
+        <button>Convert</button>
+      </div>
+    </div>
+    <div>
+      <p class="result">Result:</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
