@@ -63,14 +63,14 @@
       function gramsToCupsConv() {
         const input = document.querySelector(".input").value;
         // 1 cup = 120g of all-purpose flour
-        result = input / 198;
+        result = input / 190;
         measure = "cups";
         result = result.toFixed(3);
       }
 
       function cupsToGramsConv() {
         const input = document.querySelector(".input").value;
-        result = input * 198;
+        result = input * 190;
         measure = "grams";
         result = result.toFixed(3);
       }
@@ -96,7 +96,7 @@
 
         document.querySelector(
           ".result"
-        ).textContent = `Result: ${result} ${measure} of white sugar`;
+        ).textContent = `Result: ${result} ${measure} of powdered sugar`;
       }
     </script>
   </body>
