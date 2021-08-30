@@ -5,6 +5,6 @@ Having trouble figuring out how many grams are in a cup for the recipe you are t
 
 In courtesy of a friend who loves to bake but has trouble converting between grams to cups (not everyone has a measuring scale!)
 
-Website: https://hbach24.github.io/Baking-Recipe-Calculator/
+**Website: https://hbach24.github.io/Baking-Recipe-Calculator/**
 
 REFERENCE: https://www.kingarthurbaking.com/learn/ingredient-weight-chart
