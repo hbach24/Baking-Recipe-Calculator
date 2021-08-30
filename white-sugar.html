@@ -19,9 +19,7 @@
             <a href="all-flour.html"> All-purpose Flour</a>
           </li>
           <li id="cake-flour"><a href="#"> Cake Flour</a></li>
-          <li id="gran-sugar">
-            <a href="white-sugar.html"> White Granulated Sugar</a>
-          </li>
+          <li id="gran-sugar"><a href="#"> White Granulated Sugar</a></li>
           <li id="brown-sugar"><a href="#"> Brown Sugar</a></li>
           <li id="powder-sugar"><a href="#"> Powdered Sugar</a></li>
         </ul>
@@ -61,14 +59,14 @@
       function gramsToCupsConv() {
         const input = document.querySelector(".input").value;
         // 1 cup = 120g of all-purpose flour
-        result = input / 120;
+        result = input / 198;
         measure = "cups";
         result = result.toFixed(3);
       }
 
       function cupsToGramsConv() {
         const input = document.querySelector(".input").value;
-        result = input * 120;
+        result = input * 198;
         measure = "grams";
         result = result.toFixed(3);
       }
@@ -78,7 +76,7 @@
 
         if (input === "") {
           document.querySelector(".result").textContent =
-            "Pick a conversion first or input a measurement.";
+            "Input a measurement.";
           return;
         }
 
@@ -86,11 +84,15 @@
           gramsToCupsConv();
         } else if (set === "cup-gram") {
           cupsToGramsConv();
+        } else {
+          document.querySelector(".result").textContent =
+            "Pick a conversion first.";
+          return;
         }
 
         document.querySelector(
           ".result"
-        ).textContent = `Result: ${result} ${measure} of all-purpose flour`;
+        ).textContent = `Result: ${result} ${measure} of white sugar`;
       }
     </script>
   </body>
